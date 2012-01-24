@@ -6,6 +6,13 @@ Quick Test Switcher
 Quick JUnit Plugin for Eclipseにインスパイアされて作りました。
 まだコードを切り替えるくらいしかできません。
 
+インストール方法
+----------------
+
+1. QuickTestSwitcher.slnを開く
+1. Releaseでビルドする
+1. QuickTestSwitcher\bin\Release\QuickTestSwitcher.vsixをダブルクリックして実行する
+
 使い方
 ------
 

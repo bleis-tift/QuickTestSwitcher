@@ -6,6 +6,7 @@
     <Version>1.0</Version>
     <Description xml:space="preserve">Quick test switcher</Description>
     <Locale>1041</Locale>
+    <License>NYSL.txt</License>
     <InstalledByMsi>false</InstalledByMsi>
     <SupportedProducts>
       <VisualStudio Version="10.0">
