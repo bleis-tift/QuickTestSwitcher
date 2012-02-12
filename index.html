@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>Quick Test Switcher</title>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+    </head>
+    <body>
+        <div><h1>Quick Test Switcher</h1></div>
+        <p>
+        テストコードと実装コードを簡単に切り替えられるようにするためのVisual Studio用アドインです。
+        <a href="http://quick-junit.sourceforge.jp/">Quick JUnit Plugin for Eclipse</a>
+        のVisual Studio版が欲しかったので、作りました。
+        </p>
+        <p>
+        上記プラグインには、テストを実行するための機能も実装されていますが、
+        本アドインにはそれは実装されていません。
+        別のアドインとして、ビルド時にバックグラウンドでテストを実行する仕組みを提供する予定です。
+        </p>
+        <h2>用語</h2>
+        <dl>
+            <dt>Quick JUnit Plugin for Eclipse</dt>
+            <dd>このアドインの元となったEclipse用のプラグインです。</dd>
+            <dt>テスティングペア</dt>
+            <dd>
+            Quick JUnit Plugin for Eclipseのドキュメントから引用すると、
+            <blockquote cite="http://web.archive.org/web/20080422234145/www.morijp.com/masarl/homepage3.nifty.com/masarl/article/eclipse/quick-junit.html">
+                「テスティングペア」とは, 実装コードに対するテストコード,
+                テストコードに対する実装コードのことを意味します。
+            </blockquote>
+            です。
+            このアドインは、この「テスティングペア」を高速に切り替えるためだけに存在します。
+            </dd>
+        </dl>
+        <h2>使い方</h2>
+        <p>対象のファイルを開いた状態で、Ctrlキーと0(ゼロ)を押すことで、対応するファイルが開きます。</p>
+        <p>このとき、エディタにフォーカスが当たっていなくても切り替えが行えます。</p>
+        <h2>更新履歴</h2>
+        <dl>
+            <dt>1.1</dt><dd>バグフィックスとドキュメントの整備</dd>
+            <dt>1.0</dt><dd>公開</dd>
+        </dl>
+        <h2>ライセンス</h2>
+        <p>
+        <a href="http://www.kmonos.net/nysl/" title="煮るなり焼くなり好きにしろライセンス">NYSL</a>です。
+        自己責任のもとに自由に使い、改造、配布などなどを行ってください。
+        </p>
+        <hr/>
+        <address>
+            contact info: <a href="https://twitter.com/bleis">@bleis</a>
+        </address>
+    </body>
+</html>
