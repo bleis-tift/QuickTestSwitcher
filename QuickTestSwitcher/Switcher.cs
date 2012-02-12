@@ -8,6 +8,8 @@ namespace bleistift.QuickTestSwitcher
 {
     public class Switcher
     {
+        static readonly string[] suffixes = new[] { "Test", "Scenario", "Spec" };
+
         readonly Project proj;
         readonly Document doc;
 
@@ -21,7 +23,6 @@ namespace bleistift.QuickTestSwitcher
         {
             get
             {
-                var suffixes = new[] { "Test", "Scenario", "Spec" };
                 var name = proj.Name;
                 return suffixes.Any(s => name.EndsWith(s) || name.EndsWith(s + "s"));
             }
@@ -57,7 +58,7 @@ namespace bleistift.QuickTestSwitcher
             get
             {
                 Func<string, bool> just =
-                    str => new[] { "Test", "Scenario", "Spec" }.Any(prefix => str.StartsWith(prefix));
+                    str => suffixes.Any(s => str.StartsWith(s));
                 Func<string, string> substrBeforeLastDot =
                     str =>
                     {
