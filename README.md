@@ -63,3 +63,8 @@ QuickTestSwitcherで切り替えることのできる実装コードとテスト
    * Spec
 
 このすべてを満たす実装コードとテストコードがテスティングペアとなります。
+
+詳しくは
+--------
+
+[マニュアル](http://bleis-tift.github.com/QuickTestSwitcher/)をご覧ください。
