@@ -102,7 +102,7 @@ namespace bleistift.QuickTestSwitcher
             catch (TargetProjectItemNotFound)
             {
                 var s = switcher.IsTestProject ? Resources.Production : Resources.Test;
-                MessageBox.Show(string.Format(Resources.NoCodes, project.Name, s));
+                MessageBox.Show(string.Format(Resources.NoCodes, doc.Name, s));
             }
         }
 
