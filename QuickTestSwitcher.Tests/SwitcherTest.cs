@@ -35,13 +35,13 @@ namespace QuickTestSwitcher.Tests
             switch (name)
             {
                 case "Hoge":
-                    return ProjItems("Dir", "A.cs", "B.cs");
+                    return ProjItems("Dir", "A.cs", "B.cs", "C.cs");
                 case "Hoge.Test":
-                    return ProjItems("ATest.cs", "BScenario.cs");
+                    return ProjItems("ATest.cs", "BScenario.cs", "CSpec.cs");
                 case "Piyo":
-                    return ProjItems("A.fs", "B.fs");
+                    return ProjItems("A.fs", "B.fs", "C.fs");
                 case "Piyo.Tests":
-                    return ProjItems("ATest.fs", "BScenario.fs");
+                    return ProjItems("ATest.fs", "BScenario.fs", "CSpec.fs");
                 case "Foo":
                     return ProjItems("Hoge.cs", "HogeHoge.cs");
                 case "FooTest":
@@ -131,12 +131,16 @@ namespace QuickTestSwitcher.Tests
         {
             [TestCase("Hoge", "A.cs", "ATest.cs")]
             [TestCase("Hoge", "B.cs", "BScenario.cs")]
+            [TestCase("Hoge", "C.cs", "CSpec.cs")]
             [TestCase("Hoge.Test", "ATest.cs", "A.cs")]
             [TestCase("Hoge.Test", "BScenario.cs", "B.cs")]
+            [TestCase("Hoge.Test", "CSpec.cs", "C.cs")]
             [TestCase("Piyo", "A.fs", "ATest.fs")]
             [TestCase("Piyo", "B.fs", "BScenario.fs")]
+            [TestCase("Piyo", "C.fs", "CSpec.fs")]
             [TestCase("Piyo.Tests", "ATest.fs", "A.fs")]
             [TestCase("Piyo.Tests", "BScenario.fs", "B.fs")]
+            [TestCase("Piyo.Tests", "CSpec.fs", "C.fs")]
             [TestCase("Foo", "Hoge.cs", "HogeTest.fs")]
             [TestCase("Foo", "HogeHoge.cs", "HogeHogeTest.fs")]
             [TestCase("FooTest", "HogeTest.fs", "Hoge.cs")]

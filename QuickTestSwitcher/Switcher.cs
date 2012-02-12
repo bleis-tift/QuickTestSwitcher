@@ -57,7 +57,7 @@ namespace bleistift.QuickTestSwitcher
             get
             {
                 Func<string, bool> just =
-                    str => new[] { "Test", "Scenario" }.Any(prefix => str.StartsWith(prefix));
+                    str => new[] { "Test", "Scenario", "Spec" }.Any(prefix => str.StartsWith(prefix));
                 Func<string, string> substrBeforeLastDot =
                     str =>
                     {
