@@ -21,7 +21,7 @@ namespace bleistift.QuickTestSwitcher
         {
             get
             {
-                var suffixes = new[] { "Test", "Scenario" };
+                var suffixes = new[] { "Test", "Scenario", "Spec" };
                 var name = proj.Name;
                 return suffixes.Any(s => name.EndsWith(s) || name.EndsWith(s + "s"));
             }

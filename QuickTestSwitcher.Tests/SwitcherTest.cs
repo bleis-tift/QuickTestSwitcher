@@ -100,6 +100,8 @@ namespace QuickTestSwitcher.Tests
             [TestCase("Hoge.Tests", true)]
             [TestCase("Hoge.Scenario", true)]
             [TestCase("Hoge.Scenarios", true)]
+            [TestCase("Hoge.Spec", true)]
+            [TestCase("Hoge.Specs", true)]
             public void テストプロジェクトかどうか判定できる(string projectName, bool expected)
             {
                 var mock = new Mock<Project>();
