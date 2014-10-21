@@ -69,6 +69,8 @@ namespace bleistift.QuickTestSwitcher
                 Func<ProjectItem, bool> isProductionProjItem =
                     pi =>
                     {
+                        if (pi.Name.ToLower().EndsWith(".resx") || pi.Name.ToLower().Contains(".designer."))
+                            return false;
                         var name = substrBeforeLastDot(pi.Name);
                         return doc.Name.StartsWith(name) && just(doc.Name.Substring(name.Length));
                     };

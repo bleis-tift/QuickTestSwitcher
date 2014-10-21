@@ -46,6 +46,10 @@ namespace QuickTestSwitcher.Tests
                     return ProjItems("Hoge.cs", "HogeHoge.cs");
                 case "FooTest":
                     return ProjItems("HogeHogeTest.fs", "HogeTest.fs");
+                case "Bar":
+                    return ProjItems("Form1.resx", "Form1.Designer.cs", "Form1.cs");
+                case "Bar.Tests":
+                    return ProjItems("Form1Test.cs");
                 default:
                     return new ProjectItem[0];
             }
@@ -53,7 +57,7 @@ namespace QuickTestSwitcher.Tests
 
         static Project[] Projects()
         {
-            return new[] { "Hoge", "Piyo", "Piyo.Tests", "Hoge.Test", "Foo", "FooTest" }.Select(n =>
+            return new[] { "Hoge", "Piyo", "Piyo.Tests", "Hoge.Test", "Foo", "FooTest", "Bar", "Bar.Tests" }.Select(n =>
             {
                 var projItemsMock = new Mock<ProjectItems>();
                 projItemsMock.Setup(_ => _.GetEnumerator()).Returns(ProjItems(n).GetEnumerator());
@@ -145,6 +149,7 @@ namespace QuickTestSwitcher.Tests
             [TestCase("Foo", "HogeHoge.cs", "HogeHogeTest.fs")]
             [TestCase("FooTest", "HogeTest.fs", "Hoge.cs")]
             [TestCase("FooTest", "HogeHogeTest.fs", "HogeHoge.cs")]
+            [TestCase("Bar.Tests", "Form1Test.cs", "Form1.cs")]
             public void 対象のプロジェクトアイテムを取得できる(string activeProjectName, string activeDocName, string expected)
             {
                 var proj = NewProjectMock(activeProjectName);
