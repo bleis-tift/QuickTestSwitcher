@@ -92,7 +92,7 @@ namespace bleistift.QuickTestSwitcher
             var switcher = new Switcher(project, doc);
             try
             {
-                switcher.TargetProjectItem.Open().Activate();
+                switcher.TargetProjectItem.Open(EnvDTE.Constants.vsViewKindCode).Activate();
             }
             catch (TargetProjectNotFound)
             {
